@@ -34,7 +34,7 @@ import sys
 import json
 from argparse import ArgumentParser
 from vendor import importdir
-from mode import Mode
+from modes.mode import Mode
 from lightutils.LightUtils import LightUtils
 
 if __name__ == '__main__':
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     config = []
-    with open('config.json') as configFile:
+    with open('config/config.json') as configFile:
         config = json.load(configFile)
     lightutils = LightUtils(config)
 
